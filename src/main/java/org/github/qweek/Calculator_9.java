@@ -65,13 +65,6 @@ public class Calculator_9 implements Calculator {
         return Splitter.on(Pattern.compile(pattern));
     }
 
-    private CharMatcher matcher(String delimiter) {
-        if (delimiter.length() != 1) {
-            throw new IllegalArgumentException("Delimiter too long");
-        }
-        return CharMatcher.is(delimiter.charAt(0));
-    }
-
     private int convert(String number) {
         try {
             return Integer.valueOf(number);
