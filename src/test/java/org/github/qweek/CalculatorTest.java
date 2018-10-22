@@ -47,6 +47,7 @@ class CalculatorTest {
     @ParameterizedTest(name = "{index}: {arguments}.add(...)")
     @MethodSource("calculators")
     void testAdd(Calculator calculator) {
+        assertEquals(0, calculator.add(null));
         assertEquals(0, calculator.add(""));
         assertEquals(1, calculator.add("1"));
         assertEquals(3, calculator.add("1,2"));
